@@ -1,4 +1,3 @@
-export const config = { runtime: 'edge' };
 
 export default async function handler(req) {
   if (req.method !== 'POST') return new Response('Method not allowed', { status: 405 });
@@ -28,3 +27,4 @@ export default async function handler(req) {
     return new Response(JSON.stringify({ error: e.message }), { status: 500 });
   }
 }
+export const config = { runtime: 'edge' };
