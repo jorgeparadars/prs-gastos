@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -236,10 +235,23 @@ function updateCharCount(el) {
 
 function toBase64(file) {
   return new Promise((res, rej) => {
-    const r = new FileReader();
-    r.onload = () => res(r.result.split(',')[1]);
-    r.onerror = rej;
-    r.readAsDataURL(file);
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      const maxSize = 1024;
+      let w = img.width, h = img.height;
+      if (w > maxSize || h > maxSize) {
+        if (w > h) { h = Math.round(h * maxSize / w); w = maxSize; }
+        else { w = Math.round(w * maxSize / h); h = maxSize; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      URL.revokeObjectURL(url);
+      res(canvas.toDataURL('image/jpeg', 0.85).split(',')[1]);
+    };
+    img.onerror = rej;
+    img.src = url;
   });
 }
 
@@ -274,7 +286,7 @@ async function handlePhoto(input) {
   document.getElementById('aiResult').classList.remove('visible');
   try {
     const base64 = await toBase64(file);
-    const result = await callClaudePhoto(base64, file.type);
+    const result = await callClaudePhoto(base64, 'image/jpeg');
     extractedData = result;
     renderAiRows('aiRows', result);
     document.getElementById('aiResult').classList.add('visible');
