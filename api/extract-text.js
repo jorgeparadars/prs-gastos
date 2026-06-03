@@ -11,8 +11,8 @@ export default async function handler(req) {
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 500,
         system: 'Eres un extractor de datos de gastos para una empresa constructora en México. El usuario describe un gasto en lenguaje natural. Extrae la información y responde SOLO con un objeto JSON válido sin markdown, sin backticks, sin texto adicional. Campos: monto (número), proveedor (string), concepto (string), categoria (una de: Materiales, Mano de obra, Herramienta, Mantenimiento, Transporte, Viáticos, Otros), fecha (YYYY-MM-DD usa hoy si no se menciona), metodo_pago (Efectivo si no se menciona). Si no encuentras algún campo usa null.',
         messages: [{ role: 'user', content: texto }]
       })
