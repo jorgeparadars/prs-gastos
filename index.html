@@ -5,76 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Familia Gastos">
-<title>Familia Gastos</title>
+<meta name="apple-mobile-web-app-title" content="PRS Gastos">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAFMklEQVR4nO3cv28cRRiH8XcvdoTBAiIKXJrWSDQUpkdCoqBENCCEHZAo0oDIHxDR8KOmcQxIJKJOiZSIDmQk6LCEaFzaFAQicSFnh6WIHNnO3d7uzjs7u995Pm3i3SkevZ6bW29hCe1vrpUp7484VrZ3i1T37uzGxJu3riKPehMixjQx445yYUJGHTHCdr0gIaMNz7BdLkTI8OAR9ij0AsQMLx4tBQVNzPAW2lSrEU/I6EKbLUjjCU3M6Eqb1hoFTczoWtPmagdNzEilSXu1giZmpFa3wblBEzP6ok6LwefQQJ9UBs10Rt/Ma3Jm0MSMvqpqc2rQxIy+m9Uoe2hIeSRopjOGYlqrTGhIORU00xlDc7ZZJjSkPAya6YyhOtkuExpSCBpSRmZsNzB8xw0zoSGFoCGFoCFlIfUC2nj26q+pl5CNg4vPp15CIyM+EELF/uZayZYDUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUgb5opk2dnZ2Ui8hufX19dRLiI4JDSkEDSnZbDlSWN3amPlve+9+2eFK8kHQzqoinvX/iNsPQTupG3LVzxJ2OPbQDqbF/MSrF12ug2aymdCxjqzOvj+5WFq2x19+05Zfe99sdM7G331l5dGk9vVWtzZ4/3UAJnSAaS8Df+q9z6z8528rJ/+alf/Z8usfulwX9RB0S7OiW3zuBbv7ww0zK2188xu7v7/nen1UI+gWqmKb/PaTPfnOx2bnFq04v2Tj77+Nch9MR9DO7mxdtsPff7ZiYdGeuXLDHnvxldRLygpBNzRvapZHhza+dd3Ke2O7/fmGLb9xOer9cBpBO7vw0ddWLCyamdn9vw7Mjg4TrygvBO1sfOuaPf3BVSvOL9mFS1/YnWtXUi8pKwTdQJ1f//d+uWm3P33bysld+/OTt2yy+2Mn98UDBB3JH5deSr2ELGXzTaHHA/6r4ctozWP9POAPDAxBQwpBQwpBQwpBN5DqAXwe/K+PoCElm2M7ryOrgy2XyzSSw3GbFyZ0Q13/NQl/vdIMQUMKQbfQ1dRkOjdH0C3Fjo2Y2yHoALGiI+b2CDqQd3zEHIagHXhFSMzhsjmHju04xjYP4xOyH4J2djLOqriJOI5sgk7yBv+KZzD2Eqwnh28c2UNDCkFDCkFDCkFDCkFDCkFDSjbHdjkcWYEJDTEEDSkEDSkEDSkEDSkEDSkEDSkEDSkEDSnZfFOY5AH/nsnh21ImNKQQNKQQNKQQNKQQNKQQNKRkc2yXw5EVmNAQQ9CQQtCQQtCQQtCQQtCQQtCQQtCQQtCQks03hTzgn8e3pUxoSCFoSCFoSCFoSCFoSCFoSMnm2C6HIyswoSGGoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGl2N9cK1MvAvDChIYUgoaU0cr2bpF6EYCHle3dggkNKQQNKQQNKQQNKSOzB5vp1AsBQhw3zISGFIKGlIdBs+3AUJ1slwkNKaeCZkpjaM42y4SGlEeCZkpjKKa1yoSGlKlBM6XRd7ManTmhiRp9VdVm5ZaDqNE385pkDw0pc4NmSqMv6rRYa0ITNVKr22DtLQdRI5Um7TXaQxM1uta0ucYfCokaXWnTWlCcvHUJMYQMzaBjO6Y1vIU2FXwOTdTw4tGSa4xsQdCG51CMMl0JG3XE+O0edbtA2Jgm5ja1s/0vceetq89aST/QEbmmlAcF/wPcnVgqBwqo8gAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAFMklEQVR4nO3cv28cRRiH8XcvdoTBAiIKXJrWSDQUpkdCoqBENCCEHZAo0oDIHxDR8KOmcQxIJKJOiZSIDmQk6LCEaFzaFAQicSFnh6WIHNnO3d7uzjs7u995Pm3i3SkevZ6bW29hCe1vrpUp7484VrZ3i1T37uzGxJu3riKPehMixjQx445yYUJGHTHCdr0gIaMNz7BdLkTI8OAR9ij0AsQMLx4tBQVNzPAW2lSrEU/I6EKbLUjjCU3M6Eqb1hoFTczoWtPmagdNzEilSXu1giZmpFa3wblBEzP6ok6LwefQQJ9UBs10Rt/Ma3Jm0MSMvqpqc2rQxIy+m9Uoe2hIeSRopjOGYlqrTGhIORU00xlDc7ZZJjSkPAya6YyhOtkuExpSCBpSRmZsNzB8xw0zoSGFoCGFoCFlIfUC2nj26q+pl5CNg4vPp15CIyM+EELF/uZayZYDUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUgb5opk2dnZ2Ui8hufX19dRLiI4JDSkEDSnZbDlSWN3amPlve+9+2eFK8kHQzqoinvX/iNsPQTupG3LVzxJ2OPbQDqbF/MSrF12ug2aymdCxjqzOvj+5WFq2x19+05Zfe99sdM7G331l5dGk9vVWtzZ4/3UAJnSAaS8Df+q9z6z8528rJ/+alf/Z8usfulwX9RB0S7OiW3zuBbv7ww0zK2188xu7v7/nen1UI+gWqmKb/PaTPfnOx2bnFq04v2Tj77+Nch9MR9DO7mxdtsPff7ZiYdGeuXLDHnvxldRLygpBNzRvapZHhza+dd3Ke2O7/fmGLb9xOer9cBpBO7vw0ddWLCyamdn9vw7Mjg4TrygvBO1sfOuaPf3BVSvOL9mFS1/YnWtXUi8pKwTdQJ1f//d+uWm3P33bysld+/OTt2yy+2Mn98UDBB3JH5deSr2ELGXzTaHHA/6r4ctozWP9POAPDAxBQwpBQwpBQwpBN5DqAXwe/K+PoCElm2M7ryOrgy2XyzSSw3GbFyZ0Q13/NQl/vdIMQUMKQbfQ1dRkOjdH0C3Fjo2Y2yHoALGiI+b2CDqQd3zEHIagHXhFSMzhsjmHju04xjYP4xOyH4J2djLOqriJOI5sgk7yBv+KZzD2Eqwnh28c2UNDCkFDCkFDCkFDCkFDCkFDSjbHdjkcWYEJDTEEDSkEDSkEDSkEDSkEDSkEDSkEDSkEDSnZfFOY5AH/nsnh21ImNKQQNKQQNKQQNKQQNKQQNKRkc2yXw5EVmNAQQ9CQQtCQQtCQQtCQQtCQQtCQQtCQQtCQks03hTzgn8e3pUxoSCFoSCFoSCFoSCFoSCFoSMnm2C6HIyswoSGGoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGFoCGl2N9cK1MvAvDChIYUgoaU0cr2bpF6EYCHle3dggkNKQQNKQQNKQQNKSOzB5vp1AsBQhw3zISGFIKGlIdBs+3AUJ1slwkNKaeCZkpjaM42y4SGlEeCZkpjKKa1yoSGlKlBM6XRd7ManTmhiRp9VdVm5ZaDqNE385pkDw0pc4NmSqMv6rRYa0ITNVKr22DtLQdRI5Um7TXaQxM1uta0ucYfCokaXWnTWlCcvHUJMYQMzaBjO6Y1vIU2FXwOTdTw4tGSa4xsQdCG51CMMl0JG3XE+O0edbtA2Jgm5ja1s/0vceetq89aST/QEbmmlAcF/wPcnVgqBwqo8gAAAABJRU5ErkJggg==">
+<title>PRS Gastos</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; min-height: 100vh; }
-:root {
-  --teal: #1A7F6E;
-  --teal-light: #E8F5F2;
-  --teal-dark: #125C50;
-  --border: #e0e0e0;
-  --text: #1a1a1a;
-  --text-secondary: #666;
-  --bg: #fff;
-  --bg-secondary: #f8f8f8;
-  --red: #c0392b;
-  --red-light: #fff5f5;
-}
+:root { --orange: #E8632A; --orange-light: #FDF0EA; --orange-dark: #B84E1E; --border: #e0e0e0; --text: #1a1a1a; --text-secondary: #666; --bg: #fff; --bg-secondary: #f8f8f8; --green: #2d6a4f; --green-light: #e6f4ea; }
 .app { max-width: 420px; margin: 0 auto; background: var(--bg); min-height: 100vh; position: relative; }
 
-/* ── PANTALLA SETUP (primer uso) ── */
-.setup-screen { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; }
-.setup-screen.hidden { display: none; }
-.setup-logo { width: 72px; height: 72px; border-radius: 20px; background: var(--teal); display: flex; align-items: center; justify-content: center; font-size: 36px; margin-bottom: 1.5rem; }
-.setup-title { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-align: center; }
-.setup-sub { font-size: 14px; color: var(--text-secondary); margin-bottom: 2rem; text-align: center; line-height: 1.5; }
-.setup-form { width: 100%; display: flex; flex-direction: column; gap: 14px; }
-.setup-field label { font-size: 11px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 5px; }
-.setup-field input { width: 100%; padding: 13px 14px; font-size: 16px; border: 1.5px solid var(--border); border-radius: 12px; background: var(--bg); color: var(--text); font-family: inherit; outline: none; }
-.setup-field input:focus { border-color: var(--teal); }
-.setup-hint { font-size: 12px; color: var(--text-secondary); margin-top: 3px; }
-
-/* ── PANTALLA SELECCIÓN USUARIO ── */
+/* ── PANTALLA DE SELECCIÓN DE USUARIO ── */
 .user-select-screen { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; }
 .user-select-screen.hidden { display: none; }
-.user-select-logo { width: 64px; height: 64px; border-radius: 16px; background: var(--teal); display: flex; align-items: center; justify-content: center; font-size: 32px; margin-bottom: 1.5rem; }
+.user-select-logo { width: 64px; height: 64px; border-radius: 16px; background: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 32px; margin-bottom: 1.5rem; }
 .user-select-title { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-.user-select-sub { font-size: 14px; color: var(--text-secondary); margin-bottom: 2rem; }
-.user-list { width: 100%; display: flex; flex-direction: column; gap: 12px; }
-.user-card { width: 100%; padding: 18px; border-radius: 16px; border: 1.5px solid var(--border); background: var(--bg); cursor: pointer; text-align: left; transition: all 0.15s; font-family: inherit; display: flex; align-items: center; gap: 14px; }
+.user-select-sub { font-size: 14px; color: var(--text-secondary); margin-bottom: 2rem; text-align: center; }
+.user-list { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+.user-card { width: 100%; padding: 16px 18px; border-radius: 14px; border: 1.5px solid var(--border); background: var(--bg); cursor: pointer; text-align: left; transition: all 0.15s; font-family: inherit; display: flex; align-items: center; gap: 14px; }
 .user-card:active { transform: scale(0.98); }
-.user-card.primary { border-color: var(--teal); background: var(--teal-light); }
-.user-avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; background: #e8e8e8; flex-shrink: 0; }
-.user-card.primary .user-avatar { background: var(--teal); color: #fff; }
-.user-name { font-size: 16px; font-weight: 600; color: var(--text); }
+.user-card.admin { border-color: var(--orange); background: var(--orange-light); }
+.user-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; background: #eee; flex-shrink: 0; }
+.user-card.admin .user-avatar { background: var(--orange); }
+.user-name { font-size: 15px; font-weight: 600; color: var(--text); }
 .user-role { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+.user-card.admin .user-role { color: var(--orange-dark); }
 
-/* ── HEADER ── */
+/* ── HEADER CON USUARIO ACTIVO ── */
 .header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; background: var(--bg); position: sticky; top: 0; z-index: 10; }
-.header-title { font-size: 17px; font-weight: 700; color: var(--text); }
-.header-sub { font-size: 11px; color: var(--text-secondary); margin-top: 1px; }
+.header-title { font-size: 17px; font-weight: 600; color: var(--text); }
+.header-sub { font-size: 12px; color: var(--text-secondary); margin-top: 1px; }
 .header-user { display: flex; align-items: center; gap: 8px; cursor: pointer; }
-.header-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; font-size: 16px; color: #fff; }
-.header-name { font-size: 12px; font-weight: 600; color: var(--text); }
+.header-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.header-name { font-size: 12px; font-weight: 600; color: var(--text); max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .header-switch { font-size: 10px; color: var(--text-secondary); }
 
-/* ── NAVEGACIÓN ── */
-.main-nav { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--border); }
-.nav-btn { padding: 11px 4px; text-align: center; font-size: 12px; font-weight: 500; color: var(--text-secondary); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s; background: none; border-top: none; border-left: none; border-right: none; font-family: inherit; }
-.nav-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
+/* ── TABS PRINCIPALES ── */
+.main-nav { display: grid; border-bottom: 1px solid var(--border); }
+.main-nav.two-cols { grid-template-columns: 1fr 1fr; }
+.main-nav.three-cols { grid-template-columns: 1fr 1fr 1fr; }
+.nav-btn { padding: 11px 6px; text-align: center; font-size: 13px; font-weight: 500; color: var(--text-secondary); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s; background: none; border-top: none; border-left: none; border-right: none; font-family: inherit; }
+.nav-btn.active { color: var(--orange); border-bottom-color: var(--orange); }
 
 .status-bar { height: 3px; background: #eee; }
-.status-fill { height: 100%; background: var(--teal); width: 0%; transition: width 0.3s; }
-
-.screen { padding: 1.25rem; }
+.status-fill { height: 100%; background: var(--orange); width: 0%; transition: width 0.3s; }
+.screen { padding: 1.25rem; display: block; }
 .screen.hidden { display: none; }
-#tabConfig { display: none; }
-#tabConfig.visible { display: block; }
-
-/* ── CAMPOS ── */
-.label { font-size: 11px; color: var(--text-secondary); margin-bottom: 5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.label { font-size: 11px; color: var(--text-secondary); margin-bottom: 5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
 .field-group { margin-bottom: 1.1rem; }
 select, input[type="text"], input[type="number"], textarea {
   width: 100%; padding: 11px 13px; font-size: 15px;
@@ -83,183 +60,127 @@ select, input[type="text"], input[type="number"], textarea {
   font-family: inherit; appearance: none; -webkit-appearance: none;
   outline: none; transition: border-color 0.15s;
 }
-select:focus, input:focus, textarea:focus { border-color: var(--teal); }
+select:focus, input:focus, textarea:focus { border-color: var(--orange); }
 select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 13px center; padding-right: 34px; }
 textarea { resize: none; height: 85px; line-height: 1.5; }
-
-/* ── TABS CAPTURA ── */
+input[type="number"] { -moz-appearance: textfield; }
 .capture-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 1.1rem; }
 .capture-tab { padding: 10px 6px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); cursor: pointer; text-align: center; transition: all 0.15s; }
-.capture-tab.active { border-color: var(--teal); background: var(--teal-light); }
+.capture-tab.active { border-color: var(--orange); background: var(--orange-light); }
 .capture-tab-icon { font-size: 22px; display: block; margin-bottom: 3px; }
 .capture-tab span { font-size: 11px; color: var(--text-secondary); }
-.capture-tab.active span { color: var(--teal-dark); font-weight: 600; }
+.capture-tab.active span { color: var(--orange-dark); font-weight: 600; }
 .capture-panel { display: none; }
 .capture-panel.active { display: block; }
-
-/* ── FOTO ── */
 .photo-zone { border: 2px dashed var(--border); border-radius: 12px; padding: 2rem 1rem; text-align: center; cursor: pointer; background: var(--bg-secondary); transition: all 0.15s; position: relative; min-height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
-.photo-zone:hover { border-color: var(--teal); background: var(--teal-light); }
+.photo-zone:hover { border-color: var(--orange); background: var(--orange-light); }
 .photo-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
 .photo-zone-icon { font-size: 36px; }
 .photo-zone p { font-size: 14px; color: var(--text-secondary); }
 .photo-preview { width: 100%; max-height: 200px; object-fit: contain; border-radius: 8px; margin-top: 8px; display: none; }
-
-/* ── VOZ ── */
-.voice-zone { border: 2px dashed var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; background: var(--bg-secondary); transition: all 0.2s; margin-bottom: 10px; }
-.voice-zone.listening { border-color: var(--teal); background: var(--teal-light); animation: pulse 1.2s ease-in-out infinite; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
-.mic-btn { width: 72px; height: 72px; border-radius: 50%; background: var(--teal); border: none; cursor: pointer; font-size: 30px; display: inline-flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 14px rgba(26,127,110,0.3); }
-.mic-btn.recording { background: var(--red); box-shadow: 0 4px 18px rgba(192,57,43,0.4); transform: scale(1.08); }
-.mic-btn:active { transform: scale(0.95); }
-.voice-status { font-size: 13px; color: var(--text-secondary); margin-top: 10px; }
-.voice-status.active { color: var(--teal); font-weight: 600; }
-.voice-transcript { width: 100%; margin-top: 10px; padding: 10px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; font-size: 14px; color: var(--text); min-height: 48px; line-height: 1.5; font-style: italic; display: none; }
-.voice-transcript.visible { display: block; }
-
-/* ── IA ── */
 .ai-loading { display: none; flex-direction: column; align-items: center; gap: 10px; padding: 1.5rem; background: var(--bg-secondary); border-radius: 12px; margin-top: 10px; }
 .ai-loading.visible { display: flex; }
-.spinner { width: 24px; height: 24px; border: 2.5px solid #eee; border-top-color: var(--teal); border-radius: 50%; animation: spin 0.7s linear infinite; }
+.spinner { width: 24px; height: 24px; border: 2.5px solid #eee; border-top-color: var(--orange); border-radius: 50%; animation: spin 0.7s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .ai-loading p { font-size: 13px; color: var(--text-secondary); }
 .ai-result { background: var(--bg-secondary); border-radius: 12px; padding: 12px; margin-top: 10px; display: none; border: 1px solid #eee; }
 .ai-result.visible { display: block; }
-.ai-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: var(--teal-dark); background: var(--teal-light); padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.ai-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: var(--orange-dark); background: var(--orange-light); padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
 .ai-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid #eee; }
 .ai-row:last-child { border-bottom: none; }
 .ai-row-label { font-size: 12px; color: var(--text-secondary); }
 .ai-row-val { font-size: 13px; font-weight: 600; color: var(--text); text-align: right; max-width: 60%; }
-
-/* ── BOTONES ── */
-.btn-primary { width: 100%; padding: 14px; background: var(--teal); color: #fff; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit; transition: opacity 0.15s; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 0.5rem; }
+.btn-primary { width: 100%; padding: 14px; background: var(--orange); color: #fff; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit; transition: opacity 0.15s; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 0.5rem; }
 .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
 .btn-primary:active:not(:disabled) { opacity: 0.85; }
 .btn-secondary { width: 100%; padding: 11px; background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 10px; font-size: 14px; cursor: pointer; font-family: inherit; margin-top: 8px; transition: background 0.15s; }
 .btn-secondary:active { background: var(--bg-secondary); }
 .char-count { font-size: 11px; color: #aaa; text-align: right; margin-top: 4px; }
-
-/* ── ÉXITO ── */
 .success-screen { text-align: center; padding: 2.5rem 1.25rem; }
-.success-icon { width: 68px; height: 68px; border-radius: 50%; background: var(--teal-light); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-size: 32px; }
-.success-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+.success-icon { width: 68px; height: 68px; border-radius: 50%; background: #e6f4ea; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-size: 32px; }
+.success-title { font-size: 20px; font-weight: 600; margin-bottom: 6px; }
 .success-detail { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; }
 .success-card { background: var(--bg-secondary); border-radius: 12px; padding: 1rem; text-align: left; margin-bottom: 1.5rem; border: 1px solid #eee; }
 .success-card-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eee; }
 .success-card-row:last-child { border-bottom: none; }
 .success-card-label { font-size: 12px; color: var(--text-secondary); }
 .success-card-val { font-size: 13px; font-weight: 600; color: var(--text); text-align: right; }
-
-/* ── ERROR ── */
-.error-msg { background: #fff5f5; border: 1px solid #ffd0d0; border-radius: 10px; padding: 10px 13px; font-size: 13px; color: var(--red); margin-top: 10px; display: none; }
+.error-msg { background: #fff5f5; border: 1px solid #ffd0d0; border-radius: 10px; padding: 10px 13px; font-size: 13px; color: #c0392b; margin-top: 10px; display: none; }
 .error-msg.visible { display: block; }
 
-/* ── DASHBOARD ── */
-.dash-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-.dash-month { font-size: 16px; font-weight: 700; color: var(--text); }
-.dash-nav { display: flex; gap: 4px; }
-.dash-nav button { width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; }
-.dash-filter { display: flex; gap: 8px; margin-bottom: 1.1rem; }
-.dash-filter-btn { flex: 1; padding: 7px 4px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); font-size: 12px; font-weight: 500; color: var(--text-secondary); cursor: pointer; text-align: center; font-family: inherit; transition: all 0.15s; }
-.dash-filter-btn.active { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); font-weight: 600; }
-.dash-total { background: var(--teal); border-radius: 14px; padding: 1.1rem 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; }
-.dash-total-label { font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 2px; }
-.dash-total-val { font-size: 28px; font-weight: 700; color: #fff; }
-.dash-total-sub { font-size: 12px; color: rgba(255,255,255,0.7); }
-.dash-total-icon { font-size: 36px; opacity: 0.6; }
-.cat-bar-item { margin-bottom: 12px; }
-.cat-bar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
-.cat-bar-name { font-size: 13px; color: var(--text); font-weight: 500; }
-.cat-bar-monto { font-size: 13px; font-weight: 700; color: var(--text); }
-.cat-bar-track { height: 6px; background: #eee; border-radius: 3px; overflow: hidden; }
-.cat-bar-fill { height: 100%; background: var(--teal); border-radius: 3px; transition: width 0.5s ease; }
-.cat-bar-pct { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
-.empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); }
-.empty-state-icon { font-size: 48px; margin-bottom: 12px; }
-.empty-state p { font-size: 14px; }
-.dash-loading { text-align: center; padding: 2rem; color: var(--text-secondary); font-size: 14px; }
-
-/* ── HISTORIAL ── */
-.hist-filters { display: flex; gap: 8px; margin-bottom: 1rem; }
-.hist-filter-btn { flex: 1; padding: 7px 4px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); font-size: 12px; font-weight: 500; color: var(--text-secondary); cursor: pointer; text-align: center; font-family: inherit; transition: all 0.15s; }
-.hist-filter-btn.active { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); font-weight: 600; }
-.hist-item { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid #f2f2f2; }
-.hist-item:last-child { border-bottom: none; }
-.hist-cat-icon { width: 40px; height: 40px; border-radius: 12px; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-.hist-info { flex: 1; min-width: 0; }
-.hist-concepto { font-size: 14px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.hist-meta { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
-.hist-right { text-align: right; flex-shrink: 0; }
-.hist-monto { font-size: 15px; font-weight: 700; color: var(--text); }
-.hist-persona { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
-.hist-loading { text-align: center; padding: 2rem; color: var(--text-secondary); font-size: 14px; }
-
-/* ── CONFIG ── */
-.config-section { margin-bottom: 1.5rem; }
-.config-section-title { font-size: 13px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
-.config-card { background: var(--bg-secondary); border-radius: 14px; border: 1px solid var(--border); padding: 1rem; }
-.config-user-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-.config-user-row:last-child { margin-bottom: 0; }
-.config-user-num { width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.config-save-msg { font-size: 13px; color: var(--teal); text-align: center; margin-top: 10px; display: none; font-weight: 600; }
-.config-save-msg.visible { display: block; }
-.config-info { background: var(--teal-light); border-radius: 10px; padding: 10px 13px; font-size: 13px; color: var(--teal-dark); line-height: 1.5; margin-bottom: 1rem; }
-.supabase-url-field { font-size: 12px; }
-
-/* ── AJUSTE RESPONSIVE ── */
-@media (max-width: 380px) {
-  .capture-tabs { grid-template-columns: repeat(3, 1fr); gap: 6px; }
-  .capture-tab-icon { font-size: 18px; }
-}
+/* ── SALDOS ── */
+.saldo-card { background: var(--bg-secondary); border-radius: 14px; border: 1px solid var(--border); padding: 1rem 1.1rem; margin-bottom: 12px; }
+.saldo-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.saldo-name { font-size: 15px; font-weight: 600; color: var(--text); }
+.saldo-badge { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+.saldo-badge.positivo { background: var(--green-light); color: var(--green); }
+.saldo-badge.negativo { background: #fff5f5; color: #c0392b; }
+.saldo-badge.cero { background: #f0f0f0; color: #888; }
+.saldo-rows { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.saldo-row { text-align: center; }
+.saldo-row-label { font-size: 10px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.saldo-row-val { font-size: 14px; font-weight: 700; color: var(--text); margin-top: 2px; }
+.saldo-row-val.entregado { color: var(--green); }
+.saldo-row-val.gastado { color: var(--orange); }
+.saldo-section-title { font-size: 13px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin: 1.2rem 0 0.6rem; }
+.entrega-form { background: var(--bg-secondary); border-radius: 12px; padding: 1rem; border: 1px solid var(--border); margin-bottom: 1rem; }
+.entrega-form-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.saldo-loading { text-align: center; padding: 2rem; color: var(--text-secondary); font-size: 14px; }
+.historial-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.historial-item:last-child { border-bottom: none; }
+.historial-left { display: flex; align-items: center; gap: 10px; }
+.historial-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.historial-dot.entrega { background: var(--green); }
+.historial-dot.gasto { background: var(--orange); }
+.historial-desc { font-size: 13px; color: var(--text); }
+.historial-meta { font-size: 11px; color: var(--text-secondary); margin-top: 1px; }
+.historial-monto { font-size: 14px; font-weight: 700; }
+.historial-monto.entrega { color: var(--green); }
+.historial-monto.gasto { color: var(--orange); }
 </style>
 </head>
 <body>
 <div class="app">
 
-  <!-- ── SETUP (primer uso) ── -->
-  <div id="setupScreen" class="setup-screen hidden">
-    <div class="setup-logo">🏠</div>
-    <div class="setup-title">Bienvenido a Familia Gastos</div>
-    <div class="setup-sub">Configura los nombres una sola vez.<br>Cada dispositivo recuerda quién eres.</div>
-    <div class="setup-form">
-      <div class="setup-field">
-        <label>Usuario 1 — tú</label>
-        <input type="text" id="setupNombre1" placeholder="Ej: Jorge" maxlength="30">
-      </div>
-      <div class="setup-field">
-        <label>Usuario 2 — tu esposa</label>
-        <input type="text" id="setupNombre2" placeholder="Ej: Diana" maxlength="30">
-      </div>
-      <div class="setup-field">
-        <label>URL Supabase</label>
-        <input type="text" id="setupUrl" placeholder="https://xxxx.supabase.co" class="supabase-url-field">
-      </div>
-      <div class="setup-field">
-        <label>API Key Supabase (anon public)</label>
-        <input type="text" id="setupKey" placeholder="sb_publishable_..." class="supabase-url-field">
-      </div>
-      <div class="error-msg" id="setupError"></div>
-      <button class="btn-primary" onclick="guardarSetup()">Guardar y continuar →</button>
+  <!-- ── PANTALLA DE SELECCIÓN DE USUARIO ── -->
+  <div id="userSelectScreen" class="user-select-screen">
+    <div class="user-select-logo">🧾</div>
+    <div class="user-select-title">PRS Gastos</div>
+    <div class="user-select-sub">¿Quién eres?</div>
+    <div class="user-list">
+      <button class="user-card admin" onclick="selectUser('Jorge Parada')">
+        <div class="user-avatar">👤</div>
+        <div>
+          <div class="user-name">Jorge Parada</div>
+          <div class="user-role">Director · acceso completo</div>
+        </div>
+      </button>
+      <button class="user-card" onclick="selectUser('Luis Castillo')">
+        <div class="user-avatar">👷</div>
+        <div>
+          <div class="user-name">Luis Castillo</div>
+          <div class="user-role">Residente de obra</div>
+        </div>
+      </button>
+      <button class="user-card" onclick="selectUser('Itzel Romero')">
+        <div class="user-avatar">👷</div>
+        <div>
+          <div class="user-name">Itzel Romero</div>
+          <div class="user-role">Residente de obra</div>
+        </div>
+      </button>
     </div>
-  </div>
-
-  <!-- ── SELECCIÓN USUARIO ── -->
-  <div id="userSelectScreen" class="user-select-screen hidden">
-    <div class="user-select-logo">🏠</div>
-    <div class="user-select-title">Familia Gastos</div>
-    <div class="user-select-sub">¿Quién registra?</div>
-    <div class="user-list" id="userList"></div>
   </div>
 
   <!-- ── APP PRINCIPAL ── -->
   <div id="mainApp" class="hidden">
     <div class="header">
       <div>
-        <div class="header-title">Familia Gastos</div>
-        <div class="header-sub" id="headerSub">Efectivo</div>
+        <div class="header-title">PRS Gastos</div>
+        <div class="header-sub">PRS Construcciones</div>
       </div>
       <div class="header-user" onclick="cambiarUsuario()">
-        <div class="header-avatar" id="headerAvatarEmoji">👤</div>
+        <div class="header-avatar">👤</div>
         <div>
           <div class="header-name" id="headerName"></div>
           <div class="header-switch">Cambiar</div>
@@ -267,83 +188,70 @@ textarea { resize: none; height: 85px; line-height: 1.5; }
       </div>
     </div>
 
-    <div class="main-nav">
-      <button class="nav-btn active" onclick="showMainTab('capturar')">✏️ Capturar</button>
-      <button class="nav-btn" onclick="showMainTab('dashboard')">📊 Mes</button>
-      <button class="nav-btn" onclick="showMainTab('historial')">📋 Historial</button>
+    <div class="main-nav" id="mainNav">
+      <button class="nav-btn active" onclick="showMainTab('gasto')">📝 Gasto</button>
+      <button class="nav-btn" onclick="showMainTab('saldos')">💰 Saldo</button>
     </div>
+
     <div class="status-bar"><div class="status-fill" id="statusFill"></div></div>
 
-    <!-- ── TAB CAPTURAR ── -->
-    <div id="tabCapturar">
+    <!-- ── TAB GASTO ── -->
+    <div id="tabGasto">
       <div class="screen" id="screenForm">
         <div class="field-group">
-          <div class="label">Registrando como</div>
-          <div id="usuarioDisplay" style="padding:11px 13px;font-size:15px;border:1px solid var(--border);border-radius:10px;color:var(--text);background:var(--bg-secondary);font-weight:600;"></div>
+          <div class="label">Residente</div>
+          <div id="residenteDisplay" style="padding:11px 13px;font-size:15px;border:1px solid var(--border);border-radius:10px;color:var(--text);background:var(--bg-secondary);"></div>
         </div>
-
+        <div class="field-group">
+          <div class="label">Obra / Proyecto</div>
+          <select id="obra" onchange="updateProgress()">
+            <option value="">Selecciona...</option>
+            <option value="BADNAV26">BADNAV26 — Bodega Navarro</option>
+            <option value="BDACLAR26">BDACLAR26 — Barda Clarvi</option>
+            <option value="CERWALB26">CERWALB26 — Cerca Walbro</option>
+            <option value="PRS-EQUIPO">PRS — Herramienta y Equipo</option>
+          </select>
+        </div>
         <div class="field-group">
           <div class="label">Método de captura</div>
           <div class="capture-tabs">
-            <div class="capture-tab active" onclick="switchCaptureTab('foto')">
+            <div class="capture-tab active" onclick="switchTab('foto')">
               <span class="capture-tab-icon">📷</span>
               <span>Foto ticket</span>
             </div>
-            <div class="capture-tab" onclick="switchCaptureTab('voz')">
+            <div class="capture-tab" onclick="switchTab('voz')">
               <span class="capture-tab-icon">🎤</span>
               <span>Dictado</span>
             </div>
-            <div class="capture-tab" onclick="switchCaptureTab('manual')">
+            <div class="capture-tab" onclick="switchTab('manual')">
               <span class="capture-tab-icon">⌨️</span>
               <span>Manual</span>
             </div>
           </div>
 
-          <!-- PANEL FOTO -->
           <div class="capture-panel active" id="panelFoto">
-            <!-- Dos botones: cámara directa y carrete -->
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px;">
-              <div style="position:relative;border:2px dashed var(--teal);border-radius:12px;padding:1.4rem 0.5rem;text-align:center;background:var(--teal-light);cursor:pointer;">
-                <span style="font-size:28px;display:block;margin-bottom:6px">📷</span>
-                <p style="font-size:13px;color:var(--teal-dark);font-weight:600">Cámara</p>
-                <input type="file" accept="image/*" capture="environment" onchange="handlePhoto(this)"
-                  style="position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;">
-              </div>
-              <div style="position:relative;border:2px dashed var(--border);border-radius:12px;padding:1.4rem 0.5rem;text-align:center;background:var(--bg-secondary);cursor:pointer;">
-                <span style="font-size:28px;display:block;margin-bottom:6px">🖼️</span>
-                <p style="font-size:13px;color:var(--text-secondary);font-weight:600">Carrete</p>
-                <input type="file" accept="image/*" onchange="handlePhoto(this)"
-                  style="position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;">
-              </div>
+            <div class="photo-zone" id="photoZone">
+              <span class="photo-zone-icon">📸</span>
+              <p id="photoLabel">Toca para tomar foto o seleccionar imagen</p>
+              <input type="file" accept="image/*" capture="environment" id="fileInput" onchange="handlePhoto(this)">
             </div>
-            <p id="photoLabel" style="font-size:13px;color:var(--text-secondary);min-height:18px;margin-top:4px;"></p>
             <img id="photoPreview" class="photo-preview">
-            <div class="ai-loading" id="aiLoadingFoto">
+            <div class="ai-loading" id="aiLoading">
               <div class="spinner"></div>
               <p>Leyendo ticket con IA...</p>
             </div>
-            <div class="ai-result" id="aiResultFoto">
+            <div class="ai-result" id="aiResult">
               <div class="ai-tag">✨ Extraído por IA</div>
-              <div id="aiRowsFoto"></div>
+              <div id="aiRows"></div>
             </div>
           </div>
 
-          <!-- PANEL VOZ -->
           <div class="capture-panel" id="panelVoz">
-            <!-- Opción A: Web Speech API (Chrome/Safari con soporte) -->
-            <div class="voice-zone" id="voiceZone">
-              <button class="mic-btn" id="micBtn" onclick="toggleVoice()">🎤</button>
-              <div class="voice-status" id="voiceStatus">Toca el micrófono para dictar</div>
+            <div class="field-group" style="margin-bottom:0">
+              <textarea id="textoVoz" placeholder='Dicta con Typeless o escribe: "850 pesos ferretería López materiales"' oninput="updateCharCount(this)"></textarea>
+              <div class="char-count" id="charCount">0 caracteres</div>
             </div>
-            <div class="voice-transcript" id="voiceTranscript"></div>
-            <!-- Opción B: textarea con dictado de teclado (siempre visible como fallback) -->
-            <div id="voiceTextareaWrap" style="margin-top:10px;display:none;">
-              <p style="font-size:12px;color:var(--text-secondary);margin-bottom:6px;">O escribe / dicta con el teclado:</p>
-              <textarea id="voiceTextarea" rows="3"
-                style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:14px;resize:none;"
-                placeholder='Ej: "250 pesos comida McDonald\'s"'></textarea>
-            </div>
-            <button class="btn-secondary" id="btnInterpretarVoz" onclick="procesarTextoVoz()" style="display:none">✨ Interpretar con IA</button>
+            <button class="btn-secondary" onclick="procesarTexto()">✨ Interpretar con IA</button>
             <div class="ai-loading" id="aiLoadingVoz">
               <div class="spinner"></div>
               <p>Interpretando con IA...</p>
@@ -354,35 +262,27 @@ textarea { resize: none; height: 85px; line-height: 1.5; }
             </div>
           </div>
 
-          <!-- PANEL MANUAL -->
           <div class="capture-panel" id="panelManual">
             <div class="field-group">
               <div class="label">Categoría</div>
               <select id="categoriaManual">
                 <option value="">Selecciona...</option>
-                <option value="Casa">🏠 Casa</option>
-                <option value="Comida">🛒 Comida</option>
-                <option value="Salud">💊 Salud</option>
-                <option value="Educación">📚 Educación</option>
-                <option value="Vehículos">🚗 Vehículos</option>
-                <option value="Gasolina">⛽ Gasolina</option>
-                <option value="Country">⛳ Country</option>
-                <option value="Entretenimiento">🎬 Entretenimiento</option>
-                <option value="Ropa">👕 Ropa</option>
-                <option value="Viajes">✈️ Viajes</option>
-                <option value="Servicios">💡 Servicios</option>
-                <option value="Donaciones">❤️ Donaciones</option>
-                <option value="Alcohol">🍷 Alcohol</option>
-                <option value="Takeout">🥡 Takeout</option>
+                <option value="Materiales">Materiales</option>
+                <option value="Mano de obra">Mano de obra</option>
+                <option value="Herramienta">Herramienta</option>
+                <option value="Mantenimiento">Mantenimiento</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Viáticos">Viáticos</option>
+                <option value="Otros">Otros</option>
               </select>
             </div>
             <div class="field-group">
-              <div class="label">Concepto</div>
-              <input type="text" id="conceptoManual" placeholder="¿En qué se gastó?">
+              <div class="label">Proveedor</div>
+              <input type="text" id="proveedorManual" placeholder="Nombre del proveedor">
             </div>
             <div class="field-group">
-              <div class="label">Lugar / Proveedor</div>
-              <input type="text" id="proveedorManual" placeholder="Tienda, restaurante, etc.">
+              <div class="label">Concepto</div>
+              <input type="text" id="conceptoManual" placeholder="¿Qué se compró o pagó?">
             </div>
             <div class="field-group" style="margin-bottom:0">
               <div class="label">Monto ($)</div>
@@ -392,7 +292,9 @@ textarea { resize: none; height: 85px; line-height: 1.5; }
         </div>
 
         <div class="error-msg" id="errorMsg"></div>
-        <button class="btn-primary" id="btnRegistrar" onclick="registrarGasto()">✓ Registrar gasto</button>
+        <button class="btn-primary" id="btnRegistrar" onclick="registrarGasto()">
+          ✓ Registrar gasto
+        </button>
       </div>
 
       <div class="screen hidden" id="screenSuccess">
@@ -401,76 +303,15 @@ textarea { resize: none; height: 85px; line-height: 1.5; }
           <div class="success-title">Gasto registrado</div>
           <div class="success-detail" id="successDetail"></div>
           <div class="success-card" id="successCard"></div>
-          <button class="btn-primary" onclick="nuevoGasto()">+ Registrar otro</button>
+          <button class="btn-primary" onclick="nuevoGasto()">+ Registrar otro gasto</button>
         </div>
       </div>
     </div>
 
-    <!-- ── TAB DASHBOARD ── -->
-    <div id="tabDashboard" class="hidden">
-      <div class="screen">
-        <div class="dash-header">
-          <div class="dash-month" id="dashMonth"></div>
-          <div class="dash-nav">
-            <button onclick="cambiarMes(-1)">‹</button>
-            <button onclick="cambiarMes(1)">›</button>
-          </div>
-        </div>
-        <div class="dash-filter" id="dashFilter">
-          <button class="dash-filter-btn active" onclick="setDashFilter('todos')">Todos</button>
-          <button class="dash-filter-btn" id="dashFilterU1" onclick="setDashFilter('u1')"></button>
-          <button class="dash-filter-btn" id="dashFilterU2" onclick="setDashFilter('u2')"></button>
-        </div>
-        <div id="dashContent"><div class="dash-loading">Cargando...</div></div>
-      </div>
-    </div>
-
-    <!-- ── TAB HISTORIAL ── -->
-    <div id="tabHistorial" class="hidden">
-      <div class="screen">
-        <div class="hist-filters" id="histFilters">
-          <button class="hist-filter-btn active" onclick="setHistFilter('todos')">Todos</button>
-          <button class="hist-filter-btn" id="histFilterU1" onclick="setHistFilter('u1')"></button>
-          <button class="hist-filter-btn" id="histFilterU2" onclick="setHistFilter('u2')"></button>
-        </div>
-        <div id="histContent"><div class="hist-loading">Cargando...</div></div>
-      </div>
-    </div>
-
-    <!-- ── TAB CONFIG (oculto, accesible desde header) ── -->
-    <div id="tabConfig" class="hidden">
-      <div class="screen">
-        <div class="config-info">
-          Estos cambios aplican para todos los dispositivos. Comparte la app con tu esposa enviándole el archivo HTML — ella verá los mismos datos en tiempo real.
-        </div>
-        <div class="config-section">
-          <div class="config-section-title">Usuarios</div>
-          <div class="config-card">
-            <div class="config-user-row">
-              <div class="config-user-num">1</div>
-              <input type="text" id="configNombre1" placeholder="Usuario 1" style="margin:0">
-            </div>
-            <div class="config-user-row" style="margin-bottom:0">
-              <div class="config-user-num">2</div>
-              <input type="text" id="configNombre2" placeholder="Usuario 2" style="margin:0">
-            </div>
-          </div>
-        </div>
-        <div class="config-section">
-          <div class="config-section-title">Conexión Supabase</div>
-          <div class="config-card">
-            <div class="field-group">
-              <div class="label">URL</div>
-              <input type="text" id="configUrl" placeholder="https://xxxx.supabase.co" class="supabase-url-field">
-            </div>
-            <div class="field-group" style="margin-bottom:0">
-              <div class="label">API Key (anon public)</div>
-              <input type="text" id="configKey" placeholder="sb_publishable_..." class="supabase-url-field">
-            </div>
-          </div>
-        </div>
-        <button class="btn-primary" onclick="guardarConfig()">Guardar cambios</button>
-        <div class="config-save-msg" id="configSaveMsg">✓ Cambios guardados</div>
+    <!-- ── TAB SALDOS ── -->
+    <div id="tabSaldos" class="hidden">
+      <div class="screen" id="screenSaldos">
+        <div id="saldosContent"><div class="saldo-loading">Cargando saldos...</div></div>
       </div>
     </div>
 
@@ -478,190 +319,242 @@ textarea { resize: none; height: 85px; line-height: 1.5; }
 </div>
 
 <script>
-// ─────────────────────────────────────────────
-// ESTADO GLOBAL
-// ─────────────────────────────────────────────
-let SUPABASE_URL = '';
-let SUPABASE_KEY = '';
-let NOMBRES = { u1: '', u2: '' };
-let currentUser = null;   // 'u1' | 'u2'
-let currentCaptureTab = 'foto';
+const SUPABASE_URL = 'https://kzeculiumpoaeoanwscd.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_i0WBoZq-Zyz1K_-bPysD4w_vUGbNQgS';
+const ADMIN = 'Jorge Parada';
+const RESIDENTES = ['Luis Castillo', 'Itzel Romero'];
+
+let currentUser = null;
+let currentTab = 'foto';
 let extractedData = {};
-let recognition = null;
-let isRecording = false;
-let voiceText = '';
-let dashMes = null;       // { year, month } (1-indexed)
-let dashFilter = 'todos';
-let histFilter = 'todos';
 
-const CAT_ICONS = {
-  'Casa':'🏠','Comida':'🛒','Salud':'💊','Educación':'📚',
-  'Vehículos':'🚗','Gasolina':'⛽','Country':'⛳','Entretenimiento':'🎬',
-  'Ropa':'👕','Viajes':'✈️','Servicios':'💡','Donaciones':'❤️',
-  'Alcohol':'🍷','Takeout':'🥡','Otros':'📦'
-};
-
-// ─────────────────────────────────────────────
-// INIT
-// ─────────────────────────────────────────────
-function init() {
-  const cfg = JSON.parse(localStorage.getItem('familia_config') || '{}');
-  if (!cfg.u1 || !cfg.u2 || !cfg.url || !cfg.key) {
-    // Sin config: mostrar la app en modo Config directamente
-    document.getElementById('setupScreen').classList.add('hidden');
-    document.getElementById('userSelectScreen').classList.add('hidden');
-    document.getElementById('mainApp').classList.remove('hidden');
-    abrirConfig();
-    return;
-  }
-  NOMBRES.u1 = cfg.u1;
-  NOMBRES.u2 = cfg.u2;
-  SUPABASE_URL = cfg.url;
-  SUPABASE_KEY = cfg.key;
-
-  // Rellenar filtros dinámicos
-  document.getElementById('dashFilterU1').textContent = NOMBRES.u1;
-  document.getElementById('dashFilterU2').textContent = NOMBRES.u2;
-  document.getElementById('histFilterU1').textContent = NOMBRES.u1;
-  document.getElementById('histFilterU2').textContent = NOMBRES.u2;
-
-  const savedUser = localStorage.getItem('familia_user');
-  if (savedUser === 'u1' || savedUser === 'u2') {
-    currentUser = savedUser;
-    iniciarApp();
-  } else {
-    mostrarSeleccionUsuario();
-  }
-}
-
-// ─────────────────────────────────────────────
-// SETUP (primer uso)
-// ─────────────────────────────────────────────
-function guardarSetup() {
-  const n1 = document.getElementById('setupNombre1').value.trim();
-  const n2 = document.getElementById('setupNombre2').value.trim();
-  const url = document.getElementById('setupUrl').value.trim().replace(/\/$/, '');
-  const key = document.getElementById('setupKey').value.trim();
-  const err = document.getElementById('setupError');
-
-  if (!n1 || !n2) { showSetupError('Ingresa los dos nombres.'); return; }
-  if (!url.startsWith('https://')) { showSetupError('La URL debe empezar con https://'); return; }
-  if (!key) { showSetupError('Ingresa el API Key.'); return; }
-
-  localStorage.setItem('familia_config', JSON.stringify({ u1: n1, u2: n2, url, key }));
-  err.classList.remove('visible');
-  init();
-}
-
-function showSetupError(msg) {
-  const el = document.getElementById('setupError');
-  el.textContent = msg;
-  el.classList.add('visible');
-}
-
-// ─────────────────────────────────────────────
-// SELECCIÓN DE USUARIO
-// ─────────────────────────────────────────────
-function mostrarSeleccionUsuario() {
-  document.getElementById('setupScreen').classList.add('hidden');
-  document.getElementById('mainApp').classList.add('hidden');
-  document.getElementById('userSelectScreen').classList.remove('hidden');
-
-  document.getElementById('userList').innerHTML = `
-    <button class="user-card primary" onclick="selectUser('u1')">
-      <div class="user-avatar">👤</div>
-      <div>
-        <div class="user-name">${NOMBRES.u1}</div>
-        <div class="user-role">Usuario 1</div>
-      </div>
-    </button>
-    <button class="user-card" onclick="selectUser('u2')">
-      <div class="user-avatar">👤</div>
-      <div>
-        <div class="user-name">${NOMBRES.u2}</div>
-        <div class="user-role">Usuario 2</div>
-      </div>
-    </button>`;
-}
-
-function selectUser(uid) {
-  currentUser = uid;
-  localStorage.setItem('familia_user', uid);
+// ── SELECCIÓN DE USUARIO ──
+function selectUser(nombre) {
+  currentUser = nombre;
+  localStorage.setItem('prs_user', nombre);
   iniciarApp();
 }
 
 function cambiarUsuario() {
-  localStorage.removeItem('familia_user');
+  localStorage.removeItem('prs_user');
   currentUser = null;
+  document.getElementById('userSelectScreen').classList.remove('hidden');
   document.getElementById('mainApp').classList.add('hidden');
-  mostrarSeleccionUsuario();
 }
 
 function iniciarApp() {
   document.getElementById('userSelectScreen').classList.add('hidden');
-  document.getElementById('setupScreen').classList.add('hidden');
   document.getElementById('mainApp').classList.remove('hidden');
+  document.getElementById('headerName').textContent = currentUser.split(' ')[0];
+  document.getElementById('residenteDisplay').textContent = currentUser;
 
-  const nombre = NOMBRES[currentUser];
-  document.getElementById('headerName').textContent = nombre;
-  document.getElementById('usuarioDisplay').textContent = nombre;
+  // Si es admin, mostrar pestaña de saldos con 3 columnas
+  const nav = document.getElementById('mainNav');
+  if (currentUser === ADMIN) {
+    nav.className = 'main-nav two-cols';
+  } else {
+    nav.className = 'main-nav two-cols';
+  }
 
-  const now = new Date();
-  dashMes = { year: now.getFullYear(), month: now.getMonth() + 1 };
-
-  showMainTab('capturar');
+  showMainTab('gasto');
 }
 
-// ─────────────────────────────────────────────
-// TABS PRINCIPALES
-// ─────────────────────────────────────────────
+// ── TABS PRINCIPALES ──
 function showMainTab(tab) {
-  const tabs = ['capturar', 'dashboard', 'historial'];
-  const btns = document.querySelectorAll('.nav-btn');
-  btns.forEach((b, i) => b.classList.toggle('active', tabs[i] === tab));
-
-  // Ocultar todos primero
-  ['tabCapturar','tabDashboard','tabHistorial','tabConfig'].forEach(id => {
-    const el = document.getElementById(id);
-    el.classList.add('hidden');
-    el.style.display = 'none';
-  });
-
-  // Mostrar solo el activo
-  const activeId = tab === 'capturar' ? 'tabCapturar' : tab === 'dashboard' ? 'tabDashboard' : 'tabHistorial';
-  const activeEl = document.getElementById(activeId);
-  activeEl.classList.remove('hidden');
-  activeEl.style.display = 'block';
-
-  // Actualizar labels de filtros con nombres actuales
-  const u1 = NOMBRES.u1 || 'Usuario 1';
-  const u2 = NOMBRES.u2 || 'Usuario 2';
-  ['dashFilterU1','histFilterU1'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = u1; });
-  ['dashFilterU2','histFilterU2'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = u2; });
-
-  if (tab === 'dashboard') cargarDashboard();
-  if (tab === 'historial') cargarHistorial();
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.nav-btn')[tab === 'gasto' ? 0 : 1].classList.add('active');
+  document.getElementById('tabGasto').classList.toggle('hidden', tab !== 'gasto');
+  document.getElementById('tabSaldos').classList.toggle('hidden', tab !== 'saldos');
+  if (tab === 'saldos') cargarSaldos();
 }
 
-// ─────────────────────────────────────────────
-// TABS CAPTURA
-// ─────────────────────────────────────────────
-function switchCaptureTab(tab) {
-  currentCaptureTab = tab;
-  extractedData = {};
-  document.querySelectorAll('.capture-tab').forEach((t, i) => {
-    t.classList.toggle('active', ['foto', 'voz', 'manual'][i] === tab);
-  });
+// ── SALDOS ──
+async function cargarSaldos() {
+  const content = document.getElementById('saldosContent');
+  content.innerHTML = '<div class="saldo-loading">Cargando saldos...</div>';
+
+  const esAdmin = currentUser === ADMIN;
+  const residentes = esAdmin ? [ADMIN, ...RESIDENTES] : [currentUser];
+
+  try {
+    // Traer todos los gastos
+    const rGastos = await fetch(`${SUPABASE_URL}/rest/v1/gastos?select=residente,monto`, {
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
+    });
+    const gastos = await rGastos.json();
+
+    // Traer todas las entregas
+    const rEntregas = await fetch(`${SUPABASE_URL}/rest/v1/entregas?select=residente,monto,nota,fecha&order=fecha.desc`, {
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
+    });
+    const entregas = await rEntregas.json();
+
+    let html = '';
+
+    // Tarjetas de saldo por residente
+    for (const res of residentes) {
+      const totalEntregado = entregas.filter(e => e.residente === res).reduce((s, e) => s + Number(e.monto), 0);
+      const totalGastado = gastos.filter(g => g.residente === res).reduce((s, g) => s + Number(g.monto), 0);
+      const saldo = totalEntregado - totalGastado;
+      const badgeClass = saldo > 0 ? 'positivo' : saldo < 0 ? 'negativo' : 'cero';
+      const saldoLabel = saldo >= 0 ? `+$${fmt(saldo)}` : `-$${fmt(Math.abs(saldo))}`;
+
+      html += `
+        <div class="saldo-card">
+          <div class="saldo-card-header">
+            <div class="saldo-name">${res.split(' ')[0]}</div>
+            <div class="saldo-badge ${badgeClass}">${saldoLabel}</div>
+          </div>
+          <div class="saldo-rows">
+            <div class="saldo-row">
+              <div class="saldo-row-label">Entregado</div>
+              <div class="saldo-row-val entregado">$${fmt(totalEntregado)}</div>
+            </div>
+            <div class="saldo-row">
+              <div class="saldo-row-label">Gastado</div>
+              <div class="saldo-row-val gastado">$${fmt(totalGastado)}</div>
+            </div>
+            <div class="saldo-row">
+              <div class="saldo-row-label">Disponible</div>
+              <div class="saldo-row-val">${saldoLabel}</div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // Solo admin puede registrar entregas
+    if (esAdmin) {
+      html += `
+        <div class="saldo-section-title">Registrar entrega de efectivo</div>
+        <div class="entrega-form">
+          <div class="field-group">
+            <div class="label">Residente</div>
+            <select id="entregaResidente">
+              <option value="">Selecciona...</option>
+              ${[...RESIDENTES].map(r => `<option value="${r}">${r}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field-group">
+            <div class="label">Monto ($)</div>
+            <input type="number" id="entregaMonto" placeholder="0.00" step="0.01" min="0">
+          </div>
+          <div class="field-group" style="margin-bottom:0">
+            <div class="label">Nota (opcional)</div>
+            <input type="text" id="entregaNota" placeholder="Ej: anticipo semana, fondo obra">
+          </div>
+          <div class="error-msg" id="entregaError"></div>
+          <button class="btn-primary" id="btnEntrega" onclick="registrarEntrega()" style="margin-top:12px">
+            💵 Registrar entrega
+          </button>
+        </div>`;
+    }
+
+    // Historial reciente (últimos 10 movimientos del usuario actual)
+    const misEntregas = entregas.filter(e => esAdmin || e.residente === currentUser).slice(0, 5);
+    const misGastos = gastos.slice ? [] : []; // solo mostramos entregas recientes aquí
+
+    if (misEntregas.length) {
+      html += `<div class="saldo-section-title">Últimas entregas</div>`;
+      misEntregas.forEach(e => {
+        html += `
+          <div class="historial-item">
+            <div class="historial-left">
+              <div class="historial-dot entrega"></div>
+              <div>
+                <div class="historial-desc">${esAdmin ? e.residente.split(' ')[0] + ' — ' : ''}${e.nota || 'Entrega de efectivo'}</div>
+                <div class="historial-meta">${e.fecha}</div>
+              </div>
+            </div>
+            <div class="historial-monto entrega">+$${fmt(e.monto)}</div>
+          </div>`;
+      });
+    }
+
+    content.innerHTML = html;
+
+  } catch(err) {
+    content.innerHTML = '<div class="saldo-loading">Error al cargar. Verifica tu conexión.</div>';
+    console.error(err);
+  }
+}
+
+async function registrarEntrega() {
+  const residente = document.getElementById('entregaResidente').value;
+  const monto = parseFloat(document.getElementById('entregaMonto').value);
+  const nota = document.getElementById('entregaNota').value.trim();
+
+  if (!residente) { showEntregaError('Selecciona un residente.'); return; }
+  if (!monto || monto <= 0) { showEntregaError('Ingresa un monto válido.'); return; }
+
+  const btn = document.getElementById('btnEntrega');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner" style="border-color:#ffffff55;border-top-color:#fff;width:18px;height:18px"></div> Registrando...';
+
+  try {
+    const resp = await fetch(`${SUPABASE_URL}/rest/v1/entregas`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        residente,
+        monto,
+        nota: nota || null,
+        fecha: new Date().toISOString().split('T')[0],
+        created_at: new Date().toISOString()
+      })
+    });
+
+    if (resp.ok || resp.status === 201) {
+      document.getElementById('entregaResidente').value = '';
+      document.getElementById('entregaMonto').value = '';
+      document.getElementById('entregaNota').value = '';
+      cargarSaldos();
+    } else {
+      showEntregaError('Error al guardar. Intenta de nuevo.');
+    }
+  } catch(e) {
+    showEntregaError('Error de conexión.');
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = '💵 Registrar entrega';
+}
+
+function showEntregaError(msg) {
+  const el = document.getElementById('entregaError');
+  if (!el) return;
+  el.textContent = msg;
+  el.classList.add('visible');
+  setTimeout(() => el.classList.remove('visible'), 4000);
+}
+
+function fmt(n) {
+  return Number(n).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+// ── GASTO ──
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.capture-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.capture-tab')[['foto','voz','manual'].indexOf(tab)].classList.add('active');
   document.querySelectorAll('.capture-panel').forEach(p => p.classList.remove('active'));
   document.getElementById('panel' + tab.charAt(0).toUpperCase() + tab.slice(1)).classList.add('active');
-
-  // Detener grabación si cambia tab
-  if (tab !== 'voz' && isRecording) stopVoice();
+  extractedData = {};
 }
 
-// ─────────────────────────────────────────────
-// FOTO → IA
-// ─────────────────────────────────────────────
+function updateProgress() {
+  const o = document.getElementById('obra').value;
+  document.getElementById('statusFill').style.width = o ? '80%' : '40%';
+}
+
+function updateCharCount(el) {
+  document.getElementById('charCount').textContent = el.value.length + ' caracteres';
+}
+
 function toBase64(file) {
   return new Promise((res, rej) => {
     const img = new Image();
@@ -684,29 +577,7 @@ function toBase64(file) {
   });
 }
 
-async function handlePhoto(input) {
-  if (!input.files[0]) return;
-  const file = input.files[0];
-  const preview = document.getElementById('photoPreview');
-  preview.src = URL.createObjectURL(file);
-  preview.style.display = 'block';
-  document.getElementById('photoLabel').textContent = '✓ ' + file.name;
-  document.getElementById('aiLoadingFoto').classList.add('visible');
-  document.getElementById('aiResultFoto').classList.remove('visible');
-  try {
-    const base64 = await toBase64(file);
-    const result = await callClaudeImagen(base64);
-    extractedData = result;
-    renderAiRows('aiRowsFoto', result);
-    document.getElementById('aiResultFoto').classList.add('visible');
-  } catch(e) {
-    showError('No se pudo leer el ticket. Intenta de nuevo o usa captura manual.');
-    console.error(e);
-  }
-  document.getElementById('aiLoadingFoto').classList.remove('visible');
-}
-
-async function callClaudeImagen(base64) {
+async function callClaudePhoto(base64) {
   const resp = await fetch('/api/extract', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -714,132 +585,6 @@ async function callClaudeImagen(base64) {
   });
   if (!resp.ok) throw new Error(await resp.text());
   return await resp.json();
-}
-
-// ─────────────────────────────────────────────
-// VOZ → IA (Web Speech API nativa)
-// continuous=true: iOS Safari no cierra el mic solo; el usuario para manualmente
-// ─────────────────────────────────────────────
-function initSpeechRecognition() {
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SpeechRecognition) {
-    // Sin soporte: mostrar textarea como fallback
-    document.getElementById('voiceZone').style.display = 'none';
-    document.getElementById('voiceTextareaWrap').style.display = 'block';
-    document.getElementById('btnInterpretarVoz').style.display = 'block';
-    return null;
-  }
-  const rec = new SpeechRecognition();
-  rec.lang = 'es-MX';
-  rec.continuous = true;       // clave para iOS: no corta solo
-  rec.interimResults = true;   // muestra texto mientras habla
-
-  rec.onresult = (e) => {
-    let interim = '';
-    let final = '';
-    for (let i = 0; i < e.results.length; i++) {
-      if (e.results[i].isFinal) {
-        final += e.results[i][0].transcript + ' ';
-      } else {
-        interim += e.results[i][0].transcript;
-      }
-    }
-    // Acumular finales + mostrar interim en gris
-    if (final) voiceText = final.trim();
-    const el = document.getElementById('voiceTranscript');
-    el.textContent = (voiceText ? voiceText + ' ' : '') + interim;
-    el.classList.add('visible');
-  };
-
-  rec.onend = () => {
-    // En continuous=true, onend solo ocurre si el user para o hay error
-    stopVoice();
-    if (voiceText.trim()) {
-      document.getElementById('btnInterpretarVoz').style.display = 'block';
-    }
-  };
-
-  rec.onerror = (e) => {
-    stopVoice();
-    if (e.error === 'not-allowed') {
-      showError('Permiso de micrófono denegado. Ve a Configuración → Safari → Micrófono.');
-    } else if (e.error === 'no-speech') {
-      // silencio prolongado — reiniciar si sigue grabando
-      if (isRecording) {
-        try { recognition.start(); } catch(_) {}
-      }
-    }
-  };
-
-  return rec;
-}
-
-function toggleVoice() {
-  if (isRecording) { stopVoice(); return; }
-
-  if (!recognition) recognition = initSpeechRecognition();
-  if (!recognition) return; // fallback a textarea ya activado
-
-  voiceText = '';
-  document.getElementById('voiceTranscript').textContent = '';
-  document.getElementById('voiceTranscript').classList.remove('visible');
-  document.getElementById('btnInterpretarVoz').style.display = 'none';
-  document.getElementById('aiResultVoz').classList.remove('visible');
-  extractedData = {};
-
-  try {
-    recognition.start();
-    isRecording = true;
-    document.getElementById('micBtn').classList.add('recording');
-    document.getElementById('micBtn').textContent = '⏹';
-    document.getElementById('voiceStatus').textContent = 'Escuchando... toca ⏹ cuando termines';
-    document.getElementById('voiceStatus').classList.add('active');
-    document.getElementById('voiceZone').classList.add('listening');
-  } catch(e) {
-    showError('Error al iniciar el micrófono. Recarga la página e intenta de nuevo.');
-  }
-}
-
-function stopVoice() {
-  if (recognition && isRecording) {
-    try { recognition.stop(); } catch(e) {}
-  }
-  isRecording = false;
-  document.getElementById('micBtn').classList.remove('recording');
-  document.getElementById('micBtn').textContent = '🎤';
-  // Mostrar el texto final del transcript si voiceText está vacío (por si solo llegó interim)
-  const transcriptEl = document.getElementById('voiceTranscript');
-  if (!voiceText && transcriptEl.textContent.trim()) {
-    voiceText = transcriptEl.textContent.trim();
-  }
-  document.getElementById('voiceStatus').textContent = voiceText ? '✓ Listo — toca "Interpretar"' : 'Toca el micrófono para dictar';
-  document.getElementById('voiceStatus').classList.remove('active');
-  document.getElementById('voiceZone').classList.remove('listening');
-  if (voiceText.trim()) {
-    document.getElementById('btnInterpretarVoz').style.display = 'block';
-  }
-}
-
-async function procesarTextoVoz() {
-  // Prioridad: 1) voz reconocida, 2) transcript visible, 3) textarea fallback
-  const textareaEl = document.getElementById('voiceTextarea');
-  const texto = voiceText.trim()
-    || document.getElementById('voiceTranscript').textContent.trim()
-    || (textareaEl ? textareaEl.value.trim() : '');
-  if (!texto) { showError('Escribe o dicta algo primero.'); return; }
-  document.getElementById('aiLoadingVoz').classList.add('visible');
-  document.getElementById('aiResultVoz').classList.remove('visible');
-  document.getElementById('btnInterpretarVoz').style.display = 'none';
-  try {
-    const result = await callClaudeTexto(texto);
-    extractedData = result;
-    renderAiRows('aiRowsVoz', result);
-    document.getElementById('aiResultVoz').classList.add('visible');
-  } catch(e) {
-    showError('Error al interpretar. Intenta de nuevo.');
-    document.getElementById('btnInterpretarVoz').style.display = 'block';
-  }
-  document.getElementById('aiLoadingVoz').classList.remove('visible');
 }
 
 async function callClaudeTexto(texto) {
@@ -852,71 +597,97 @@ async function callClaudeTexto(texto) {
   return await resp.json();
 }
 
-// ─────────────────────────────────────────────
-// RENDER IA RESULT
-// ─────────────────────────────────────────────
+async function handlePhoto(input) {
+  if (!input.files[0]) return;
+  const file = input.files[0];
+  const preview = document.getElementById('photoPreview');
+  preview.src = URL.createObjectURL(file);
+  preview.style.display = 'block';
+  document.getElementById('photoLabel').textContent = '✓ ' + file.name;
+  document.getElementById('aiLoading').classList.add('visible');
+  document.getElementById('aiResult').classList.remove('visible');
+  try {
+    const base64 = await toBase64(file);
+    const result = await callClaudePhoto(base64);
+    extractedData = result;
+    renderAiRows('aiRows', result);
+    document.getElementById('aiResult').classList.add('visible');
+  } catch(e) {
+    showError('No se pudo leer el ticket. Intenta de nuevo o usa captura manual.');
+  }
+  document.getElementById('aiLoading').classList.remove('visible');
+}
+
+async function procesarTexto() {
+  const texto = document.getElementById('textoVoz').value.trim();
+  if (!texto) return;
+  document.getElementById('aiLoadingVoz').classList.add('visible');
+  document.getElementById('aiResultVoz').classList.remove('visible');
+  try {
+    const result = await callClaudeTexto(texto);
+    extractedData = result;
+    renderAiRows('aiRowsVoz', result);
+    document.getElementById('aiResultVoz').classList.add('visible');
+  } catch(e) {
+    showError('Error al interpretar. Intenta de nuevo.');
+  }
+  document.getElementById('aiLoadingVoz').classList.remove('visible');
+}
+
 function renderAiRows(containerId, data) {
-  const labels = {
-    monto: 'Monto', proveedor: 'Lugar/Proveedor',
-    concepto: 'Concepto', categoria: 'Categoría', fecha: 'Fecha'
-  };
+  const labels = { monto: 'Monto', proveedor: 'Proveedor', concepto: 'Concepto', categoria: 'Categoría', fecha: 'Fecha', metodo_pago: 'Método de pago' };
   document.getElementById(containerId).innerHTML = Object.entries(labels).map(([k, l]) => {
     const v = data[k];
-    let display;
-    if (k === 'monto' && v != null) display = '$' + Number(v).toLocaleString('es-MX', { minimumFractionDigits: 2 });
-    else if (k === 'categoria' && v) display = (CAT_ICONS[v] || '') + ' ' + v;
-    else display = v || '—';
+    const display = k === 'monto' && v ? '$' + Number(v).toLocaleString('es-MX', {minimumFractionDigits: 2}) : (v || '—');
     return `<div class="ai-row"><span class="ai-row-label">${l}</span><span class="ai-row-val">${display}</span></div>`;
   }).join('');
 }
 
-// ─────────────────────────────────────────────
-// REGISTRAR GASTO
-// ─────────────────────────────────────────────
 function showError(msg) {
   const el = document.getElementById('errorMsg');
   el.textContent = msg;
   el.classList.add('visible');
-  setTimeout(() => el.classList.remove('visible'), 5000);
+  setTimeout(() => el.classList.remove('visible'), 4000);
 }
 
 async function registrarGasto() {
-  let gasto = {};
+  const obra = document.getElementById('obra').value;
+  if (!obra) { showError('Selecciona una obra.'); return; }
 
-  if (currentCaptureTab === 'manual') {
+  let gasto = {};
+  if (currentTab === 'manual') {
     const monto = parseFloat(document.getElementById('montoManual').value);
     if (!monto || monto <= 0) { showError('Ingresa un monto válido.'); return; }
     gasto = {
       monto,
-      concepto: document.getElementById('conceptoManual').value.trim() || null,
-      proveedor: document.getElementById('proveedorManual').value.trim() || null,
+      proveedor: document.getElementById('proveedorManual').value || null,
+      concepto: document.getElementById('conceptoManual').value || null,
       categoria: document.getElementById('categoriaManual').value || 'Otros',
-      fecha: new Date().toISOString().split('T')[0]
+      fecha: new Date().toISOString().split('T')[0],
+      metodo_pago: 'Efectivo'
     };
   } else {
-    if (!extractedData || !extractedData.monto) {
-      showError('Primero captura el gasto con foto o dictado y espera el resultado de IA.');
-      return;
-    }
+    if (!extractedData.monto) { showError('Primero captura o interpreta el gasto.'); return; }
     gasto = extractedData;
   }
 
   const btn = document.getElementById('btnRegistrar');
   btn.disabled = true;
-  btn.innerHTML = '<div class="spinner" style="border-color:#ffffff55;border-top-color:#fff"></div> Guardando...';
+  btn.innerHTML = '<div class="spinner" style="border-color:#ffffff55;border-top-color:#fff"></div> Registrando...';
 
   const record = {
-    persona: NOMBRES[currentUser],
-    monto: Number(gasto.monto),
-    concepto: gasto.concepto || null,
+    residente: currentUser, obra,
+    monto: gasto.monto,
     proveedor: gasto.proveedor || null,
+    concepto: gasto.concepto || null,
     categoria: gasto.categoria || 'Otros',
     fecha: gasto.fecha || new Date().toISOString().split('T')[0],
+    metodo_pago: gasto.metodo_pago || 'Efectivo',
     created_at: new Date().toISOString()
   };
 
   try {
-    const resp = await fetch(`${SUPABASE_URL}/rest/v1/gastos_familia`, {
+    const resp = await fetch(`${SUPABASE_URL}/rest/v1/gastos`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -926,18 +697,15 @@ async function registrarGasto() {
       },
       body: JSON.stringify(record)
     });
-
     if (resp.ok || resp.status === 201) {
-      document.getElementById('statusFill').style.width = '100%';
       mostrarExito(record);
     } else {
-      const errText = await resp.text();
-      showError('Error al guardar: ' + errText);
+      showError('Error al guardar: ' + await resp.text());
       btn.disabled = false;
       btn.innerHTML = '✓ Registrar gasto';
     }
   } catch(e) {
-    showError('Error de conexión. Verifica el internet.');
+    showError('Error de conexión.');
     btn.disabled = false;
     btn.innerHTML = '✓ Registrar gasto';
   }
@@ -946,252 +714,39 @@ async function registrarGasto() {
 function mostrarExito(record) {
   document.getElementById('screenForm').classList.add('hidden');
   document.getElementById('screenSuccess').classList.remove('hidden');
-  document.getElementById('successDetail').textContent = `${record.persona} · Efectivo · ${record.fecha}`;
+  document.getElementById('statusFill').style.width = '100%';
+  document.getElementById('successDetail').textContent = `Registrado por ${record.residente} · ${record.obra}`;
   document.getElementById('successCard').innerHTML = [
-    ['Categoría', (CAT_ICONS[record.categoria] || '') + ' ' + record.categoria],
-    ['Concepto', record.concepto || '—'],
-    ['Lugar', record.proveedor || '—'],
-    ['Monto', '$' + Number(record.monto).toLocaleString('es-MX', { minimumFractionDigits: 2 })],
-    ['Fecha', record.fecha]
+    ['Obra', record.obra], ['Categoría', record.categoria],
+    ['Proveedor', record.proveedor || '—'], ['Concepto', record.concepto || '—'],
+    ['Monto', '$' + Number(record.monto).toLocaleString('es-MX', {minimumFractionDigits: 2})],
+    ['Método', record.metodo_pago], ['Fecha', record.fecha]
   ].map(([l, v]) => `<div class="success-card-row"><span class="success-card-label">${l}</span><span class="success-card-val">${v}</span></div>`).join('');
 }
 
 function nuevoGasto() {
   document.getElementById('screenForm').classList.remove('hidden');
   document.getElementById('screenSuccess').classList.add('hidden');
-  ['montoManual','conceptoManual','proveedorManual','categoriaManual'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.value = '';
+  ['obra','textoVoz','montoManual','proveedorManual','conceptoManual','categoriaManual'].forEach(id => {
+    document.getElementById(id).value = '';
   });
   document.getElementById('photoLabel').textContent = 'Toca para tomar foto o seleccionar imagen';
   document.getElementById('photoPreview').style.display = 'none';
-  document.getElementById('aiResultFoto').classList.remove('visible');
+  document.getElementById('aiResult').classList.remove('visible');
   document.getElementById('aiResultVoz').classList.remove('visible');
-  document.getElementById('voiceTranscript').classList.remove('visible');
-  document.getElementById('voiceTranscript').textContent = '';
-  document.getElementById('btnInterpretarVoz').style.display = 'none';
-  voiceText = '';
   extractedData = {};
-  switchCaptureTab('foto');
+  switchTab('foto');
   document.getElementById('btnRegistrar').disabled = false;
   document.getElementById('btnRegistrar').innerHTML = '✓ Registrar gasto';
-  document.getElementById('statusFill').style.width = '0%';
+  updateProgress();
 }
 
-// ─────────────────────────────────────────────
-// DASHBOARD
-// ─────────────────────────────────────────────
-const MESES_ES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-
-function cambiarMes(delta) {
-  dashMes.month += delta;
-  if (dashMes.month > 12) { dashMes.month = 1; dashMes.year++; }
-  if (dashMes.month < 1) { dashMes.month = 12; dashMes.year--; }
-  cargarDashboard();
+// ── INIT ──
+const savedUser = localStorage.getItem('prs_user');
+if (savedUser) {
+  currentUser = savedUser;
+  iniciarApp();
 }
-
-function setDashFilter(f) {
-  dashFilter = f;
-  document.querySelectorAll('.dash-filter-btn').forEach((b, i) => {
-    b.classList.toggle('active', ['todos','u1','u2'][i] === f);
-  });
-  cargarDashboard();
-}
-
-async function cargarDashboard() {
-  const content = document.getElementById('dashContent');
-  content.innerHTML = '<div class="dash-loading">Cargando...</div>';
-
-  const mesLabel = MESES_ES[dashMes.month - 1] + ' ' + dashMes.year;
-  document.getElementById('dashMonth').textContent = mesLabel;
-
-  const fechaInicio = `${dashMes.year}-${String(dashMes.month).padStart(2,'0')}-01`;
-  const ultimoDia = new Date(dashMes.year, dashMes.month, 0).getDate();
-  const fechaFin = `${dashMes.year}-${String(dashMes.month).padStart(2,'0')}-${ultimoDia}`;
-
-  try {
-    let url = `${SUPABASE_URL}/rest/v1/gastos_familia?select=persona,monto,categoria,fecha&fecha=gte.${fechaInicio}&fecha=lte.${fechaFin}&order=fecha.desc`;
-    const resp = await fetch(url, {
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
-    });
-    let gastos = await resp.json();
-
-    // Filtrar por persona
-    if (dashFilter === 'u1') gastos = gastos.filter(g => g.persona === NOMBRES.u1);
-    if (dashFilter === 'u2') gastos = gastos.filter(g => g.persona === NOMBRES.u2);
-
-    if (!gastos.length) {
-      content.innerHTML = `<div class="empty-state"><div class="empty-state-icon">📭</div><p>Sin gastos en ${mesLabel}</p></div>`;
-      return;
-    }
-
-    const total = gastos.reduce((s, g) => s + Number(g.monto), 0);
-    const porCat = {};
-    gastos.forEach(g => {
-      const cat = g.categoria || 'Otros';
-      porCat[cat] = (porCat[cat] || 0) + Number(g.monto);
-    });
-    const catOrdenadas = Object.entries(porCat).sort((a, b) => b[1] - a[1]);
-    const maxMonto = catOrdenadas[0][1];
-
-    const filtroLabel = dashFilter === 'todos' ? 'entre ambos' : (dashFilter === 'u1' ? NOMBRES.u1 : NOMBRES.u2);
-
-    let html = `
-      <div class="dash-total">
-        <div>
-          <div class="dash-total-label">Total efectivo · ${filtroLabel}</div>
-          <div class="dash-total-val">$${fmt(total)}</div>
-          <div class="dash-total-sub">${gastos.length} registro${gastos.length !== 1 ? 's' : ''}</div>
-        </div>
-        <div class="dash-total-icon">💵</div>
-      </div>`;
-
-    catOrdenadas.forEach(([cat, monto]) => {
-      const pct = Math.round(monto / total * 100);
-      const barPct = Math.round(monto / maxMonto * 100);
-      html += `
-        <div class="cat-bar-item">
-          <div class="cat-bar-header">
-            <div class="cat-bar-name">${CAT_ICONS[cat] || '📦'} ${cat}</div>
-            <div class="cat-bar-monto">$${fmt(monto)}</div>
-          </div>
-          <div class="cat-bar-track"><div class="cat-bar-fill" style="width:${barPct}%"></div></div>
-          <div class="cat-bar-pct">${pct}% del total</div>
-        </div>`;
-    });
-
-    content.innerHTML = html;
-  } catch(e) {
-    content.innerHTML = '<div class="dash-loading">Error al cargar. Verifica conexión.</div>';
-    console.error(e);
-  }
-}
-
-// ─────────────────────────────────────────────
-// HISTORIAL
-// ─────────────────────────────────────────────
-function setHistFilter(f) {
-  histFilter = f;
-  document.querySelectorAll('.hist-filter-btn').forEach((b, i) => {
-    b.classList.toggle('active', ['todos','u1','u2'][i] === f);
-  });
-  cargarHistorial();
-}
-
-async function cargarHistorial() {
-  const content = document.getElementById('histContent');
-  content.innerHTML = '<div class="hist-loading">Cargando...</div>';
-
-  try {
-    let url = `${SUPABASE_URL}/rest/v1/gastos_familia?select=*&order=created_at.desc&limit=80`;
-    const resp = await fetch(url, {
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
-    });
-    let gastos = await resp.json();
-
-    if (histFilter === 'u1') gastos = gastos.filter(g => g.persona === NOMBRES.u1);
-    if (histFilter === 'u2') gastos = gastos.filter(g => g.persona === NOMBRES.u2);
-
-    if (!gastos.length) {
-      content.innerHTML = `<div class="empty-state"><div class="empty-state-icon">📋</div><p>Sin registros aún</p></div>`;
-      return;
-    }
-
-    content.innerHTML = gastos.map(g => `
-      <div class="hist-item">
-        <div class="hist-cat-icon">${CAT_ICONS[g.categoria] || '📦'}</div>
-        <div class="hist-info">
-          <div class="hist-concepto">${g.concepto || g.categoria || 'Gasto'}</div>
-          <div class="hist-meta">${g.proveedor ? g.proveedor + ' · ' : ''}${g.fecha}</div>
-        </div>
-        <div class="hist-right">
-          <div class="hist-monto">$${fmt(g.monto)}</div>
-          <div class="hist-persona">${g.persona ? g.persona.split(' ')[0] : ''}</div>
-        </div>
-      </div>`).join('');
-  } catch(e) {
-    content.innerHTML = '<div class="hist-loading">Error al cargar.</div>';
-    console.error(e);
-  }
-}
-
-// ─────────────────────────────────────────────
-// CONFIG (acceso largo toque en header)
-// ─────────────────────────────────────────────
-let headerPressTimer = null;
-document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('.header-user');
-  if (header) {
-    header.addEventListener('touchstart', () => {
-      headerPressTimer = setTimeout(() => { abrirConfig(); }, 1200);
-    });
-    header.addEventListener('touchend', () => clearTimeout(headerPressTimer));
-    header.addEventListener('mousedown', () => {
-      headerPressTimer = setTimeout(() => { abrirConfig(); }, 1200);
-    });
-    header.addEventListener('mouseup', () => clearTimeout(headerPressTimer));
-  }
-});
-
-function abrirConfig() {
-  const cfg = JSON.parse(localStorage.getItem('familia_config') || '{}');
-  document.getElementById('configNombre1').value = cfg.u1 || NOMBRES.u1 || '';
-  document.getElementById('configNombre2').value = cfg.u2 || NOMBRES.u2 || '';
-  document.getElementById('configUrl').value = cfg.url || SUPABASE_URL || '';
-  document.getElementById('configKey').value = cfg.key || SUPABASE_KEY || '';
-
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  ['tabCapturar','tabDashboard','tabHistorial'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.classList.add('hidden');
-  });
-  document.getElementById('tabConfig').classList.remove('hidden');
-  document.getElementById('tabConfig').style.display = 'block';
-}
-
-function guardarConfig() {
-  const n1 = document.getElementById('configNombre1').value.trim();
-  const n2 = document.getElementById('configNombre2').value.trim();
-  const url = document.getElementById('configUrl').value.trim().replace(/\/$/, '');
-  const key = document.getElementById('configKey').value.trim();
-
-  if (!n1 || !n2 || !url || !key) return;
-
-  const esPrimerUso = !NOMBRES.u1; // si aún no hay config en memoria
-
-  localStorage.setItem('familia_config', JSON.stringify({ u1: n1, u2: n2, url, key }));
-  NOMBRES.u1 = n1; NOMBRES.u2 = n2;
-  SUPABASE_URL = url; SUPABASE_KEY = key;
-
-  // Actualizar labels de filtros (pueden no existir si es primer uso, sin crash)
-  ['dashFilterU1','dashFilterU2','histFilterU1','histFilterU2'].forEach((id, i) => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = i % 2 === 0 ? n1 : n2;
-  });
-
-  if (esPrimerUso) {
-    // Primer uso: ir directo a selección de usuario
-    document.getElementById('tabConfig').classList.add('hidden');
-    document.getElementById('tabConfig').style.display = 'none';
-    mostrarSeleccionUsuario();
-  } else {
-    // Cambio de config en uso normal: confirmar y quedarse
-    document.getElementById('configSaveMsg').classList.add('visible');
-    setTimeout(() => document.getElementById('configSaveMsg').classList.remove('visible'), 2500);
-  }
-}
-
-// ─────────────────────────────────────────────
-// UTILS
-// ─────────────────────────────────────────────
-function fmt(n) {
-  return Number(n).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-}
-
-// ─────────────────────────────────────────────
-// ARRANQUE
-// ─────────────────────────────────────────────
-init();
 </script>
 </body>
 </html>
